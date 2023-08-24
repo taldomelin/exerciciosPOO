@@ -1,0 +1,46 @@
+"use strict";
+class ContaBancaria {
+    constructor(nome, saldo) {
+        this.nome = nome;
+        this.saldo = saldo;
+    }
+    depositar(deposito) {
+        this.saldo = this.saldo + deposito;
+        return "Meu nome é " + this.nome + " e meu novo saldo é R$" + this.saldo + " após o deposito";
+    }
+    consultar() {
+        return "Meu nome é " + this.nome + " e o saldo da minha conta é de R$ " + this.saldo + ".";
+    }
+    sacar(saque) {
+        this.saldo = this.saldo - saque;
+        return "Meu nome é " + this.nome + " e meu novo saldo é R$" + this.saldo + " após o saque";
+    }
+    novosaque(saque) {
+        this.saldo = this.saldo - saque;
+        return "Meu novo saldo é R$" + this.saldo + " após o saque";
+    }
+}
+let minhaconta = new ContaBancaria("João", 1000);
+console.log(minhaconta.consultar());
+console.log(minhaconta.depositar(500));
+console.log(minhaconta.consultar());
+console.log(minhaconta.sacar(200));
+console.log(minhaconta.consultar());
+console.log(minhaconta.novosaque(1500));
+console.log(minhaconta.consultar());
+let minhaconta2 = new ContaBancaria("Taldo", 10000);
+console.log(minhaconta.consultar());
+console.log(minhaconta.depositar(500));
+console.log(minhaconta.consultar());
+console.log(minhaconta.sacar(200));
+console.log(minhaconta.consultar());
+console.log(minhaconta.novosaque(1500));
+console.log(minhaconta.consultar());
+let minhaconta3 = new ContaBancaria("Ribamar", 99999);
+console.log(minhaconta.consultar());
+console.log(minhaconta.depositar(500));
+console.log(minhaconta.consultar());
+console.log(minhaconta.sacar(200));
+console.log(minhaconta.consultar());
+console.log(minhaconta.novosaque(1500));
+console.log(minhaconta.consultar());
