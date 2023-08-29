@@ -14,13 +14,13 @@ class Funcionario{
 
 }
 imposto(){
-    let valordescontoinss = this.salario - ((this.salario/100)* this.INSS);
+    let valordescontoinss =((this.salario/100)* this.INSS);
     let salariocomdescontoinss = this.salario - valordescontoinss;
-    let valorinpostoderenda = (this.salario - valordescontoinss)-((this.salario/100)* this.IR);
+    let valorinpostoderenda =((salariocomdescontoinss/100)* this.IR);
     return valordescontoinss + valorinpostoderenda
 }
 aumento(aumentos: number){
-    return "Aumento de "+ aumentos +" % aplicado.Novo salario:"+(((this.salario/100)*aumentos) + this.salario);
+    return "Aumento de "+ aumentos +"% aplicado.Novo salario:"+(((this.salario/100)*aumentos) + this.salario);
 }
 detalheDoFuncionario(){
     let imposto = this.imposto();
