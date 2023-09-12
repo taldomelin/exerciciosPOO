@@ -19,7 +19,7 @@ class Agenda {
         }
     }
     remover(evento) {
-        this.eventos = this.eventos.filter((item) => item.nome !== evento.nome);
+        this.eventos = this.eventos.filter(item => item.nome !== evento.nome);
     }
 }
 const evento1 = new Evento("Festa das Nações", "08/09", "20h");

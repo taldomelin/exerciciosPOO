@@ -29,7 +29,7 @@ class Agenda {
 
 
     remover(evento: Evento) {
-    this.eventos = this.eventos.filter((item) => item.nome !== evento.nome);
+    this.eventos = this.eventos.filter(item => item.nome !== evento.nome);
     }
 }
 
